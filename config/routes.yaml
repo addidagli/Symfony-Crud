@@ -1,0 +1,63 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+author_api_index:
+    path: /api/authors
+    controller: 'App\Controller\AuthorController::index'
+    methods: ['GET']
+
+author_api_create:
+    path: /api/authors
+    controller: 'App\Controller\AuthorController::create'
+    methods: ['POST']
+
+author_api_update:
+    path: /api/authors/{id}
+    controller: 'App\Controller\AuthorController::update'
+    methods: [ 'PUT' ]
+
+author_api_delete:
+    path: /api/authors/{id}
+    controller: 'App\Controller\AuthorController::delete'
+    methods: [ 'DELETE' ]
+
+author_api_search_by_id:
+    path: /api/authors/search/{id}
+    controller: 'App\Controller\AuthorController::findById'
+    methods: [ 'GET' ]
+post_api_index:
+    path: /api/posts
+    controller: 'App\Controller\PostController::index'
+    methods: ['GET']
+
+post_api_create:
+    path: /api/posts
+    controller: 'App\Controller\PostController::create'
+    methods: ['POST']
+
+post_api_update:
+    path: /api/posts/{id}
+    controller: 'App\Controller\PostController::update'
+    methods: ['PUT']
+
+post_api_delete:
+    path: /api/posts/{id}
+    controller: 'App\Controller\PostController::delete'
+    methods: ['DELETE']
+
+post_api_search_by_id:
+    path: /api/posts/search/{id}
+    controller: 'App\Controller\PostController::findById'
+    methods: ['GET']
+
+comment_api_create:
+    path: /api/comments
+    controller: 'App\Controller\CommentController::create'
+    methods: ['POST']
+
+comment_api_delete:
+    path: /api/comments/{id}
+    controller: 'App\Controller\CommentController::delete'
+    methods: ['DELETE']
